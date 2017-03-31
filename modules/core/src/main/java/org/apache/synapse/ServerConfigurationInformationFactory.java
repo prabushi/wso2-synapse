@@ -51,8 +51,6 @@ public class ServerConfigurationInformationFactory {
                 SynapseConstants.Axis2Param.SYNAPSE_HOME));
         information.setSynapseXMLLocation(getAxis2ParameterValue(axisConfiguration,
                 SynapseConstants.Axis2Param.SYNAPSE_CONFIG_LOCATION));
-        information.setServerName(getAxis2ParameterValue(axisConfiguration,
-                SynapseConstants.Axis2Param.SYNAPSE_SERVER_NAME));
         information.setResolveRoot(getAxis2ParameterValue(axisConfiguration,
                 SynapseConstants.Axis2Param.SYNAPSE_RESOLVE_ROOT));
 
@@ -77,7 +75,6 @@ public class ServerConfigurationInformationFactory {
         information.setSynapseXMLLocation(getArgument(cmd, SynapseConstants.SYNAPSE_XML));
         information.setResolveRoot(getArgument(cmd, SynapseConstants.RESOLVE_ROOT));
         information.setDeploymentMode(getArgument(cmd, SynapseConstants.DEPLOYMENT_MODE));
-        information.setServerName(getArgument(cmd, SynapseConstants.SERVER_NAME));
 
         return information;
     }
@@ -100,7 +97,6 @@ public class ServerConfigurationInformationFactory {
             information.setSynapseHome(System.getProperty(SynapseConstants.SYNAPSE_HOME));
             information.setSynapseXMLLocation(System.getProperty(SynapseConstants.SYNAPSE_XML));
             information.setResolveRoot(System.getProperty(SynapseConstants.RESOLVE_ROOT));
-            information.setServerName(System.getProperty(SynapseConstants.SERVER_NAME));
             information.setDeploymentMode(System.getProperty(SynapseConstants.DEPLOYMENT_MODE));
         } else if (args.length == 4) {
             information.setAxis2Xml(args[1]);
@@ -164,8 +160,6 @@ public class ServerConfigurationInformationFactory {
                 org.apache.axis2.Constants.AXIS2_REPO, true));
         information.setAxis2Xml(loadParameter(servletConfig,
                 org.apache.axis2.Constants.AXIS2_CONF, true));
-        information.setServerName(loadParameter(servletConfig,
-                SynapseConstants.SERVER_NAME, false));
         information.setDeploymentMode(loadParameter(servletConfig,
                 SynapseConstants.DEPLOYMENT_MODE, false));
 

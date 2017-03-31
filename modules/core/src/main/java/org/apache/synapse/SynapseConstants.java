@@ -137,8 +137,6 @@ public final class SynapseConstants {
         public static final String SYNAPSE_HOME = "SynapseConfig.HomeDirectory";
         /** Synapse resolve root */
         public static final String SYNAPSE_RESOLVE_ROOT = "SynapseConfig.ResolveRoot";
-        /** Synapse server name */
-        public static final String SYNAPSE_SERVER_NAME = "SynapseConfig.ServerName";
     }
     
     /** The name of the Parameter set on the Axis2Configuration to hold the Synapse Configuration */
@@ -360,9 +358,6 @@ public final class SynapseConstants {
     public static final String BLOCKING_SENDER_PRESERVE_REQ_HEADERS =
             "BLOCKING_SENDER_PRESERVE_REQ_HEADERS";
     public static final String DISABLE_CHUNKING = "DISABLE_CHUNKING";
-
-    /** Synapse server instance name */
-    public static final String SERVER_NAME = "serverName";
 
     /** Root for relative path */
     public static final String RESOLVE_ROOT = "resolve.root";
